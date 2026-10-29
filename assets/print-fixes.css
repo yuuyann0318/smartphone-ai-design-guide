@@ -1,0 +1,13 @@
+.print-only{display:none}
+@media print{
+  .photo-card{overflow:visible!important}
+  .photo-card figcaption{position:static!important;display:block!important;margin:2mm 0 0!important;padding:2mm 3mm!important}
+  .photo-card .download{position:static!important;display:inline-flex!important;margin-top:2mm!important}
+  .prompt .download{display:none!important}
+  .business p,.business ul{margin-block:2mm!important}
+  .business .templates{display:block!important}
+  .business .template{padding:3mm!important;line-height:1.38!important}
+  .business .template+.template{break-before:page!important;margin-top:0!important}
+  .business .print-only{display:block!important;margin:6mm 0 2mm!important;font-size:18pt!important}
+  .business .check{margin-top:2mm!important;gap:1mm!important;break-inside:avoid!important}
+}

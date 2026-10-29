@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/accessibility.css">
+  <link rel="stylesheet" href="assets/print-fixes.css">
+  <script src="assets/print-details.js" defer></script>
+  <meta name="description" content="スマホとAIで告知画像を作り、条件確認から納品まで練習する実践ガイドです。">
+  <title>スマホ×AIデザインの稼ぎ方｜完全解説</title>
+  <style>
+    :root{
+      --paper:#f7f2ea;--surface:#fffdf9;--ink:#25211f;--muted:#645b55;
+      --terra:#b84d31;--terra-deep:#7f2f20;--teal:#176b68;--teal-soft:#d9edeb;
+      --line:#ded4c9;--shadow:0 18px 45px rgba(58,37,28,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:18px;line-height:1.8}
+    img{max-width:100%;height:auto;display:block}
+    figure{margin:0}
+    button,a{font:inherit}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+    .shell{width:min(1120px,100%);margin:auto}
+    .hero{padding:28px 18px 64px;background:linear-gradient(180deg,#fffaf3 0%,var(--paper) 100%)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:56px;align-items:center}
+    .hero-grid>*{min-width:0}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;margin:0 0 14px;color:var(--terra-deep);font-weight:800;font-size:15px;letter-spacing:.04em}
+    .eyebrow::before{content:"";width:34px;height:3px;background:var(--terra);border-radius:9px}
+    h1{font-size:clamp(38px,6vw,72px);line-height:1.13;letter-spacing:-.035em;margin:0;max-width:12ch}
+    h1 strong{color:var(--terra);font-weight:900}
+    .lead{font-size:clamp(19px,2.4vw,24px);line-height:1.7;margin:26px 0 0;max-width:29em}
+    .promise{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:28px 0 0;padding:0;list-style:none}
+    .promise li{min-height:88px;padding:13px 12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;font-size:15px;line-height:1.5;box-shadow:0 8px 24px rgba(58,37,28,.07)}
+    .promise b{display:block;color:var(--teal);font-size:14px;margin-bottom:3px}
+    .cover{position:relative;background:#fff;border:10px solid #fff;border-radius:24px;box-shadow:var(--shadow);overflow:hidden}
+    .cover img{aspect-ratio:16/9;object-fit:cover}
+    .cover-note{position:absolute;right:12px;bottom:12px;background:rgba(255,253,249,.94);color:var(--muted);padding:6px 10px;border-radius:99px;font-size:14px;font-weight:700}
+    .start-link{display:inline-flex;align-items:center;justify-content:center;min-height:48px;margin-top:26px;padding:11px 20px;border-radius:99px;background:var(--teal);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 10px 26px rgba(23,107,104,.22)}
+    main{padding:0 18px 88px}
+    .intro{width:min(100%,980px);margin:-22px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:42px;box-shadow:var(--shadow)}
+    .section-kicker{color:var(--terra-deep);font-size:15px;font-weight:900;margin:0 0 8px;letter-spacing:.05em}
+    h2{font-size:clamp(28px,4.8vw,46px);line-height:1.3;letter-spacing:-.02em;margin:0 0 20px}
+    .intro-copy{font-size:20px;max-width:720px;margin:0}
+    .roles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .role{position:relative;padding:24px 20px 21px;border-radius:18px;background:#fbf7f1;border:1px solid var(--line)}
+    .role-no{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--terra);color:#fff;font-weight:900;margin-bottom:13px}
+    .role:nth-child(2) .role-no{background:var(--teal)}
+    .role:nth-child(3) .role-no{background:var(--ink)}
+    .role h3{font-size:20px;line-height:1.45;margin:0 0 7px}
+    .role p{font-size:16px;color:var(--muted);line-height:1.7;margin:0}
+    .practice{width:min(100%,980px);margin:72px auto 0}
+    .practice-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:34px;align-items:center}
+    .practice-grid>*{min-width:0}
+    .practice h2{font-size:clamp(28px,3.5vw,40px)}
+    .photo-card{position:relative;border-radius:24px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+    .photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover}
+    .photo-card figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,253,249,.95);padding:8px 12px;border-radius:10px;font-size:14px;font-weight:800;color:var(--terra-deep)}
+    .brief{background:var(--teal-soft);border-left:6px solid var(--teal);border-radius:0 18px 18px 0;padding:22px 22px;margin-top:24px}
+    .brief b{display:block;color:#0e514f;margin-bottom:5px}
+    .brief p{margin:0;font-size:17px}
+    .check{margin:24px 0 0;padding:0;list-style:none}
+    .check li{position:relative;padding:8px 0 8px 36px;border-bottom:1px dashed var(--line)}
+    .check li::before{content:"✓";position:absolute;left:0;top:8px;display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--teal);color:#fff;font-size:14px;font-weight:900}
+    .image-note{color:var(--muted);font-size:14px;margin:8px 0 0}
+    .step-block{width:min(100%,980px);margin:78px auto 0;padding-top:54px;border-top:1px solid var(--line)}
+    .step-head{display:grid;grid-template-columns:92px 1fr;gap:20px;align-items:center;margin-bottom:26px}.step-no{font-size:58px;color:var(--terra);font-weight:900;line-height:1}.step-head h2{margin:0}.step-head p{margin:4px 0 0;color:var(--muted)}
+    .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.pair>*{min-width:0}.asset{background:var(--surface);padding:12px;border:1px solid var(--line);border-radius:18px}.asset img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:11px}.asset figcaption{font-size:14px;margin:10px 3px 2px}.download{display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin-top:10px;padding:8px 15px;border-radius:8px;background:var(--teal);color:white;text-decoration:none;font-weight:800}
+    .prompt{margin-top:24px;background:#25211f;color:#fff;padding:25px;border-radius:18px}.prompt h3{margin:0 0 10px;font-size:19px;color:#aee1dc}.prompt p{margin:0;white-space:normal}.howto{width:min(100%,980px);margin:78px auto 0;display:grid;grid-template-columns:.75fr 1.25fr;gap:40px}.howto h2{margin-top:0}.steps{counter-reset:s;display:grid;gap:12px}.steps div{position:relative;padding:16px 16px 16px 56px;background:var(--surface);border:1px solid var(--line);border-radius:14px}.steps div:before{counter-increment:s;content:counter(s);position:absolute;left:15px;top:15px;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:var(--teal);color:#fff;font-weight:900}.trouble{width:min(100%,980px);margin:74px auto 0;padding:34px;border-radius:22px;background:#fff7ea;border:1px solid #e5cdb5}.trouble h2{margin-top:0}.trouble details{padding:13px 0;border-top:1px solid var(--line)}.trouble summary{cursor:pointer;font-weight:900;min-height:44px}.sources{font-size:14px;color:var(--muted)}.sources a{color:var(--teal-deep,var(--teal))}.finish{width:min(100%,980px);margin:74px auto 0;padding:36px;background:var(--teal);color:#fff;border-radius:24px}.finish h2{margin-top:0}.finish .download{background:#fff;color:var(--teal)}
+    .business{width:min(100%,980px);margin:78px auto 0}.business-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}.business-flow div{padding:16px;background:var(--surface);border-top:6px solid var(--terra);font-weight:800}.templates{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.template{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px}.template h3{margin:0 0 10px;color:var(--teal)}.template p{margin:0;white-space:pre-line}.request-sheet{margin-top:20px;padding:24px;background:#fff7ea;border-left:6px solid var(--terra)}.request-sheet ul{margin-bottom:0}
+    footer{padding:30px 18px 48px;color:var(--muted);text-align:center;font-size:14px}
+    @media (max-width:780px){
+      .hero{padding-top:20px}.hero-grid{grid-template-columns:1fr;gap:28px}.cover{order:-1;border-width:6px;border-radius:18px}
+      h1{max-width:none}.promise{grid-template-columns:1fr}.promise li{min-height:0;display:grid;grid-template-columns:82px 1fr;align-items:center}
+      .intro{padding:30px 20px;border-radius:22px}.roles{grid-template-columns:1fr}.role{display:grid;grid-template-columns:42px 1fr;column-gap:10px}.role-no{grid-row:1/3}.role h3{align-self:end}.role p{grid-column:2}
+      .practice-grid{grid-template-columns:1fr;gap:26px}.practice{margin-top:54px}
+      .pair,.howto,.templates{grid-template-columns:1fr}.business-flow{grid-template-columns:1fr 1fr}.step-head{grid-template-columns:64px 1fr}.step-no{font-size:46px}
+    }
+    @media (max-width:380px){body{font-size:18px}.hero,main{padding-left:14px;padding-right:14px}.lead{font-size:19px}.intro{padding:26px 17px}.roles{gap:12px}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+    @media print{
+      @page{size:A4;margin:13mm}
+      body{background:#fff;font-size:12pt;line-height:1.55;color:#111}
+      .hero{padding:0 0 5mm;background:#fff}.hero-grid{grid-template-columns:1.15fr .85fr;gap:8mm}.cover{border:2mm solid #fff;box-shadow:none}.cover img{max-height:62mm;object-fit:cover}
+      .start-link{display:none}main{padding:0}.intro,.photo-card{box-shadow:none}.intro{margin:0;padding:8mm;border-radius:4mm}
+      .intro{break-inside:avoid}.roles{grid-template-columns:repeat(3,1fr);gap:3mm}.role{padding:4mm}.role p{font-size:11pt}
+      .practice{break-before:page;margin-top:0}.practice-grid{grid-template-columns:.8fr 1.2fr;gap:7mm}.photo-card img{max-height:120mm}.role,.brief{break-inside:avoid}
+      .step-block{break-before:page;margin:0;padding-top:0;border-top:0}.step-head{break-after:avoid;grid-template-columns:22mm 1fr;margin-bottom:4mm}.step-no{font-size:34pt}.pair{grid-template-columns:1fr 1fr!important;gap:5mm;break-inside:avoid}.asset{padding:2mm}.asset img{max-height:104mm;object-fit:cover}.asset figcaption{font-size:8pt;margin:2mm 1mm}.asset .download{display:none}.prompt{margin-top:4mm;padding:4mm;font-size:9pt;break-inside:avoid}
+      .asset figcaption{font-size:9.5pt}.prompt{font-size:12pt;line-height:1.45}
+      .howto{break-before:page;grid-template-columns:1fr;gap:5mm;margin:0}.steps{gap:3mm;break-inside:avoid}.steps div{padding:4mm 4mm 4mm 15mm;font-size:12pt}.steps div:before{left:4mm;top:4mm}
+      .business{break-before:page;margin:0}.business-flow{grid-template-columns:repeat(4,1fr);gap:2mm;break-inside:avoid}.business-flow div{padding:3mm;font-size:9pt}.request-sheet,.templates{break-inside:avoid}.request-sheet{padding:4mm}.template{padding:4mm}
+      .business-flow div{font-size:11pt}.trouble{break-before:page;margin:0;padding:6mm}.trouble details:not([open])>*:not(summary){display:block!important}.trouble details{break-inside:avoid}.finish{display:none}footer{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">スマホだけで1枚作る実践ノート</p>
+        <h1>スマホ×AI<br><strong>デザインの稼ぎ方</strong></h1>
+        <p class="lead">AIに背景を作ってもらい、伝えたい文字は自分で載せる。3つの架空例を作りながら、保存と確認まで練習します。</p>
+        <ul class="promise" aria-label="このガイドで分かること">
+          <li><b>作る物</b>告知画像3枚</li>
+          <li><b>用意する物</b>スマホと告知内容</li>
+          <li><b>完成の目印</b>読める・合っている</li>
+        </ul>
+        <a class="start-link" href="#first-step">最初の作業を見る</a>
+      </div>
+      <figure class="cover">
+        <img src="assets/display/cover.jpg" alt="スマホ×AI デザインの稼ぎ方 完全解説の表紙" fetchpriority="high">
+        <figcaption class="cover-note">保存して見返せます</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" id="first-step">
+      <p class="section-kicker">最初に知っておくこと</p>
+          <h2>背景と文字を、<br>別々に作る。</h2>
+      <p class="intro-copy">画像の中に店名や日付まで入れると、AIが文字を間違えることがあります。なので、役割を3つに分けましょう。</p>
+      <div class="roles">
+        <article class="role"><span class="role-no">1</span><h3>AIに背景を頼む</h3><p>写真がなくても、告知の雰囲気に合う背景を作れます。</p></article>
+        <article class="role"><span class="role-no">2</span><h3>スマホで文字を載せる</h3><p>店名・日付・時刻は、自分で正しく入力します。</p></article>
+        <article class="role"><span class="role-no">3</span><h3>最後は人が確認する</h3><p>誤字、読みやすさ、素材の利用条件を見直します。</p></article>
+      </div>
+    </section>
+
+    <section class="practice">
+      <div class="practice-grid">
+        <figure class="photo-card">
+          <img src="assets/display/01-cafe-background.jpg" alt="コーヒーと焼き菓子を写した架空カフェの練習用背景" loading="lazy">
+          <figcaption>構図を考える別の背景案</figcaption><a class="download" href="assets/01-cafe-background.png" download>別案背景PNG（見本・1122×1402px）</a>
+        </figure>
+        <div>
+          <p class="section-kicker">今回の練習依頼</p>
+          <h2>何を載せるか、<br>先に決める。</h2>
+          <div class="brief">
+            <b>練習用の架空例</b>
+            <p>ひだまりカフェの「秋の焼き菓子の日」を案内する画像。10月18日、11時から。落ち着いた雰囲気で、コーヒーと焼き菓子が分かる画像にしたい。</p>
+          </div>
+          <ul class="check">
+            <li>店名と行事名</li>
+            <li>日付と開始時刻</li>
+            <li>どんな雰囲気にしたいか</li>
+            <li>保存する画像の形式</li>
+          </ul>
+          <p class="image-note">画像はイメージです。練習用の架空例です。</p>
+        </div>
+      </div>
+    </section>
+
+    <p class="image-note"><b>配布画像について：</b>背景・完成見本のPNGは1122×1402pxの見本です。自分で作るときは、Canvaの1080×1350pxキャンバスへ背景を四辺まで合わせ、PNGを書き出します。</p>
+
+    <section class="step-block">
+      <header class="step-head"><div class="step-no">01</div><div><h2>カフェの告知画像</h2><p>背景と掲載内容を、一対一で合わせます。</p></div></header>
+      <div class="pair">
+        <figure class="asset"><img src="assets/display/02-cafe-finished.jpg" alt="完成見本へ実際に使った文字なしのカフェ背景" loading="lazy"><figcaption><b>実際に使った元背景</b><br>右の完成見本へ文字を追加したPNG</figcaption><a class="download" href="assets/02-cafe-finished.png" download>元背景PNG（見本・1122×1402px）</a></figure>
+        <figure class="asset"><img src="assets/display/02-cafe-complete.jpg" alt="秋の焼き菓子の日と日時を載せた完成画像" loading="lazy"><figcaption><b>完成見本</b><br>秋の焼き菓子の日／ひだまりカフェ／10月18日 11時から</figcaption><a class="download" href="assets/02-cafe-complete.png" download>完成PNG（見本・1122×1402px）</a></figure>
+      </div>
+      <div class="prompt"><h3>AIへ頼む背景文</h3><p>人物と文字のない、架空の小さなカフェの告知画像用背景。温かい自然光、木のテーブル、コーヒーと焼き菓子。上半分に大きな白い文字スペース、下に日時を置く余白。縦4:5、落ち着いたテラコッタ色と深い緑。ロゴなし。</p></div>
+      <ul class="check"><li>行事名、店名、日時が全部ある</li><li>文字が背景へ埋もれていない</li><li>画像の端から文字が離れている</li><li>PNGを写真アプリから開ける</li></ul><p class="image-note">画像はイメージです。練習用の架空例です。</p>
+    </section>
+
+    <section class="step-block">
+      <header class="step-head"><div class="step-no">02</div><div><h2>植物教室の告知画像</h2><p>主役の写真と、読む順番をそろえます。</p></div></header>
+      <div class="pair">
+        <figure class="asset"><img src="assets/display/04-plant-finished.jpg" alt="完成見本へ実際に使った文字なしの植物教室背景" loading="lazy"><figcaption><b>実際に使った元背景</b><br>右の完成見本へ文字を追加したPNG</figcaption><a class="download" href="assets/04-plant-finished.png" download>元背景PNG（見本・1122×1402px）</a></figure>
+        <figure class="asset"><img src="assets/display/04-plant-complete.jpg" alt="ハーブの育て方教室と日時を載せた完成画像" loading="lazy"><figcaption><b>完成見本</b><br>ハーブの育て方教室／はじめてでも安心／11月9日 10時から</figcaption><a class="download" href="assets/04-plant-complete.png" download>完成PNG（見本・1122×1402px）</a></figure>
+      </div>
+      <div class="prompt"><h3>AIへ頼む背景文</h3><p>人物と文字のない、ハーブ教室の告知画像用背景。窓辺の明るいバジル鉢、白い壁、自然な葉の影。右上に大きな白い文字スペース、右下に日付と時間を置く2本の余白。縦4:5、緑とテラコッタ色、ロゴなし。</p><a class="download" href="assets/03-plant-background.png" download>別案背景PNG（見本・1122×1402px）</a></div>
+      <ul class="check"><li>教室名が最初に目へ入る</li><li>日付と時間が次に読める</li><li>初心者向けだと分かる</li><li>重要な文字を一字ずつ確認した</li></ul><p class="image-note">画像はイメージです。練習用の架空例です。</p>
+    </section>
+
+    <section class="step-block">
+      <header class="step-head"><div class="step-no">03</div><div><h2>相談会の告知画像</h2><p>説明を短くし、詳しい内容を詰め込みません。</p></div></header>
+      <div class="pair">
+        <figure class="asset"><img src="assets/display/05-consultation-finished.jpg" alt="文字のない相談会用背景" loading="lazy"><figcaption><b>元背景</b><br>見出し・日時・説明を置く枠があります</figcaption><a class="download" href="assets/05-consultation-finished.png" download>元背景PNG（見本・1122×1402px）</a></figure>
+        <figure class="asset"><img src="assets/display/05-consultation-complete.jpg" alt="暮らしを整える相談会と日時を載せた完成画像" loading="lazy"><figcaption><b>完成見本</b><br>暮らしを整える相談会／オンライン開催／11月16日 13時から</figcaption><a class="download" href="assets/05-consultation-complete.png" download>完成PNG（見本・1122×1402px）</a></figure>
+      </div>
+      <div class="prompt"><h3>AIへ頼む背景文</h3><p>人物と文字のない、暮らしの相談会の告知画像用背景。明るい机、開いたノート、白いカップ、植物。上部に大きな白い見出し枠、中央下に日時の枠、下部に説明を2行置く余白。縦4:5、白、深い緑、テラコッタ色。ロゴなし。</p></div>
+      <ul class="check"><li>何の相談会か分かる</li><li>日時とオンライン開催が読める</li><li>説明が2行で収まる</li><li>飾りより文字が先に見える</li></ul><p class="image-note">画像はイメージです。練習用の架空例です。</p>
+    </section>
+
+    <section class="howto"><div><p class="section-kicker">スマホで仕上げる</p><h2>4:5で作り、<br>PNGで保存。</h2><p>今回は縦4:5、1080×1350pxで作ります。表示名や位置は、言語や更新状況で変わる場合があります。</p></div><div class="steps"><div>ChatGPTを開き、背景文を貼って生成する。文字がなく、指定の余白が見えたら成功</div><div>生成画像を保存し、写真アプリで開けたら成功</div><div>Canvaの「作成」→カスタムサイズで1080×1350pxを指定する</div><div>アップロードした背景を四辺まで配置する。主役が切れていなければ成功</div><div>見出し、店名、日時を別々の文字枠へ入れ、一字ずつ確認する</div><div>PNGでダウンロードし、写真アプリで完成画像を開く</div></div></section>
+
+    <section class="business"><p class="section-kicker">制作を仕事へつなげる</p><h2>見本を見せて、<br>条件をそろえてから作る。</h2><p>提供するのは「スマホで読める告知画像」です。小さな店舗、教室、相談サービスなど、行事名・日時・内容を1枚で知らせたい相手へ提案できます。架空作品は実績と書かず、「練習で作った見本」として見せます。</p><div class="business-flow"><div>1 誰へ何を作るか決める</div><div>2 架空見本を見せる</div><div>3 条件を確認する</div><div>4 制作・確認・納品</div></div><div class="request-sheet"><b>依頼前の確認シート</b><ul><li>作る枚数と使う場所</li><li>画像サイズ。今回は縦4:5、1080×1350px</li><li>納品形式。PNGに加え、編集データが必要か</li><li>掲載する原文。店名、日時、価格、申込方法</li><li>依頼主の写真・ロゴを使える条件</li><li>AI画像を使ってよいか、申告が必要か</li><li>初稿日、納品日、修正回数</li></ul></div><div class="templates"><article class="template"><h3>相談するときの文</h3><p>告知画像の見本を作りました。練習用の架空例ですが、文字の大きさと情報の順番をご確認いただけます。制作する場合は、使う場所、枚数、サイズ、掲載原文、納品形式、修正回数、AI画像の可否を先に確認させてください。</p></article><article class="template"><h3>納品するときの文</h3><p>告知画像の初稿をPNGでお送りします。店名、行事名、日時、申込方法を元のご案内と照合しました。修正したい箇所は、文字と画像のどちらか、場所と内容をお知らせください。公開前の最終確認はお願いいたします。</p></article></div><h3 class="print-only">納品前の確認</h3><ul class="check"><li>依頼文の原文と、完成画像の全語を照合</li><li>指定サイズとPNG形式を確認</li><li>決めた修正回数の範囲で直した</li><li>依頼主の最終確認後に公開する</li></ul></section>
+
+    <section class="trouble"><p class="section-kicker">困ったとき</p><h2>小さくする前に、<br>文章を短くする。</h2><details><summary>保存した画像がぼやける</summary><p>スクリーンショットではなく、PNGダウンロードを使います。写真へのアクセス許可と空き容量も確認してください。</p></details><details><summary>文字が画像の端で切れる</summary><p>文字を小さくする前に、説明を短くします。上下左右へ余白を取り、保存後のPNGを開いて確認します。</p></details><details><summary>AI画像に文字が入った</summary><p>「人物と文字とロゴなし」と追加して背景を作り直します。重要な文字はデザインツールで載せます。</p></details><details><summary>素材を仕事で使ってよいか迷う</summary><p>素材単体の再販売は避け、依頼主へ編集データを渡す条件も確認します。入力素材を使う権利と、AI出力の正確さも人が確認します。</p></details><p class="sources">確認先：<a href="https://learn.chatgpt.com/docs/image-generation">ChatGPT画像生成</a>／<a href="https://chatgpt.com/pricing/">プラン</a>／<a href="https://www.canva.com/en_gb/help/navigate-canva-mobile-app/">Canvaモバイル</a>／<a href="https://www.canva.com/help/using-canva-to-create-products-for-sale/">Canva素材の販売利用</a></p></section>
+
+    <section class="finish"><h2>最初は、カフェの1枚で大丈夫です。</h2><p>背景を保存し、行事名と日時を載せ、PNGを開くところまで進めます。完成後に「読みやすい」「直したい」「次も使える」の3つへ印をつけてください。</p><a class="download" href="assets/スマホAIデザイン_保存版.pdf" download>保存版PDF（約2.8MB）</a> <a class="download" href="https://yuuyann0318.github.io/ai-fukugyo-bonus-hub/">特典入口へ戻る</a></section>
+  </main>
+  <footer>練習用ガイド　2026年10月時点</footer>
+</body>
+</html>
